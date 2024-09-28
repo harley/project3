@@ -20,7 +20,7 @@ def get_now_playing_movies():
 
     formatted_movies = "The TMDb API returned these movies:\n\n"
 
-    for movie in movies:
+    for movie in movies[:10]:  # Limit to 10 results
         title = movie.get("title", "N/A")
         movie_id = movie.get("id", "N/A")
         release_date = movie.get("release_date", "N/A")
@@ -31,7 +31,6 @@ def get_now_playing_movies():
             f"**Release Date:** {release_date}\n"
             f"**Overview:** {overview}\n\n"
         )
-
     return formatted_movies
 
 
