@@ -1,3 +1,12 @@
+# Milestone 1 Checkpoints
+# Learnings:
+# - Structure of the trace. LLM: input block -> output block. OpenAI: conversation history is array of messages.
+# - 3 roles: user, assistant, system. OpenAI convention (and limit to these roles).
+# - System messages: usually as first message, then we during conversation, we can insert more system messages.
+
+
+# Code
+
 from dotenv import load_dotenv
 import chainlit as cl
 
